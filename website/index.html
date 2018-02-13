@@ -1,0 +1,36 @@
+<html>
+
+	<head>
+		<title>Transparent Water</title>
+		<style>
+			
+			body {
+				background-color: none;
+				padding: 5rem;
+				font-family: sans-serif;
+				font-size: larger;
+				text-align: center;
+				color: darkgreen;
+			}
+
+			body:after {
+				top: 0; bottom: 0; left: 0; right: 0;
+				background-image: url('images/water_background.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				opacity: 0.3;
+				position: fixed;
+				z-index: -1; 
+				content: "";
+			}
+			h1   {margin-bottom: 4rem;}
+			div  {font-weight: bold;}
+		</style>
+	</head>
+	
+	<body>
+		<h1> Welcome to Transparent Water! </h1>
+		<div>This site is currently under construction. <br/>We are looking for water sources. We will be there soon!</div>
+	</body>
+
+</html>
