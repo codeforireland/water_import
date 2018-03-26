@@ -1,0 +1,21 @@
+Irish Water Website: 
+
+1. General Info: https://www.water.ie/water-supply/water-quality/
+
+2. Getting zone information for area (town) -> URL has lat long params - does this work for coordinates too? 
+	url: https://www.water.ie/water-supply/water-quality/results/?act=findAddress&lat=&long=&wq-address=Phibsborough 
+       METHOD: GET
+       -> Response: 
+			HTML page with zone information and a water quality overview
+       
+	You are able to use this to get the summary of your area. You can get the Zone ID by parsing the resulting HTML page for the tag "<div class="col-xs-10 col-xs-offset-2 col-lg-6 col-lg-offset-0" id="zoneNamePdf">DCC Zone 1</div>". 
+    
+3. Getting specific test results - the following code returns data for Dublin Zone 1 - how do we get other zones 
+	maybe the filter param specifies the zone (if yes, how do we get this information?)
+	url: https://www.water.ie/water-supply/water-quality/results/summary/allresults.xml?filter=1&wq-date-from=01-Jan-2017&wq-date-to=31-Dec-2017&wq-parameter=
+          METHOD: GET
+
+	The result returns a HTML page including the following table with ID: <table class="water-quality-table with-top-border" id="wq-table">
+	This table holds the individual test results for this area in clear data, means we can parse it row by row
+
+4. Goal: CSV file with water quality data
