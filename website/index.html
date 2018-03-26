@@ -1,36 +1,26 @@
 <html>
-
 	<head>
 		<title>Transparent Water</title>
-		<style>
-			
-			body {
-				background-color: none;
-				padding: 5rem;
-				font-family: sans-serif;
-				font-size: larger;
-				text-align: center;
-				color: darkgreen;
-			}
-
-			body:after {
-				top: 0; bottom: 0; left: 0; right: 0;
-				background-image: url('images/water_background.jpg');
-				background-repeat: no-repeat;
-				background-size: cover;
-				opacity: 0.3;
-				position: fixed;
-				z-index: -1; 
-				content: "";
-			}
-			h1   {margin-bottom: 4rem;}
-			div  {font-weight: bold;}
-		</style>
+		<!--link rel="shortcut icon" href="favicon.ico"-->
+		<link rel="stylesheet" href="css/main.css">
+		
+		<script>
+			var onMoreInfoButtonClicked = function() {
+				window.open(
+					'http://codeforireland.com/wordpress/portfolio/transparent-water/',
+					'_blank'
+				);
+			};
+		</script>
 	</head>
 	
 	<body>
 		<h1> Welcome to Transparent Water! </h1>
-		<div>This site is currently under construction. <br/>We are looking for water sources. We will be there soon!</div>
+		<div>
+			<p>This site is currently under construction. <br/>We are looking for water sources. We will be there soon! </p>
+			<p>This project is part of Code for Ireland.</p>
+		</div>
+		<button onclick="onMoreInfoButtonClicked()">More Info</button>
 	</body>
 
 </html>
