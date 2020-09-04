@@ -19,7 +19,7 @@
     "dotenv": "^2.0.0",
     "dotenv-safe": "^4.0.3",
     "fs": "0.0.1-security",
-    "mongodb": "^2.2.11",
+    "mongodb": "^3.6.1",
     "mongodb-extended-json": "^1.8.0",
     "xlsx": "^0.8.0"
   }
